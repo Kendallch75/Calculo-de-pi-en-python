@@ -1,6 +1,6 @@
 import random
 
-# raíz cuadrada por bisección
+# raíz cuadrada por biseccion
 def sqrt_aux(i, s, k):
     if k == 0:return i
     m = (i + s) / 2
@@ -14,7 +14,7 @@ def sqrt(n):
 def distancia(x, y):
     return sqrt(x*x + y*y)
 
-# conteo recursivo sin lista
+# conteo recursivo
 def contar_dentro(n, i=0, dentro=0):
     if i == n:return dentro
     x = random.uniform(0, 1)
@@ -22,7 +22,7 @@ def contar_dentro(n, i=0, dentro=0):
     if distancia(x, y) <= 1:return contar_dentro(n, i + 1, dentro + 1)
     else:return contar_dentro(n, i + 1, dentro)
 
-# método simulacion
+# metodo simulacion
 def Calculo_pi_simulacion(n):
     dentro = contar_dentro(n)
     if dentro == 0:return 0
